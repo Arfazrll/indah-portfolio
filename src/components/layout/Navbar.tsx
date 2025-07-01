@@ -49,20 +49,20 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <Link href="/">
-            <motion.a
+            <motion.span
               className="text-2xl font-bold gradient-text cursor-pointer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               IDA
-            </motion.a>
+            </motion.span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link key={item.href} href={item.href}>
-                <motion.a
+                <motion.span
                   className={`relative px-3 py-2 text-sm font-medium transition-colors cursor-pointer ${
                     router.pathname === item.href
                       ? 'text-primary-600 dark:text-primary-400'
@@ -80,7 +80,7 @@ const Navbar: React.FC = () => {
                       transition={{ type: 'spring', stiffness: 500, damping: 30 }}
                     />
                   )}
-                </motion.a>
+                </motion.span>
               </Link>
             ))}
           </div>
@@ -120,16 +120,15 @@ const Navbar: React.FC = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <Link href={item.href}>
-                    <a
-                      className={`block px-4 py-3 rounded-md text-base font-medium transition-colors ${
-                        router.pathname === item.href
-                          ? 'bg-primary-100 dark:bg-primary-900/20 text-primary-600 dark:text-primary-400'
-                          : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
-                      }`}
-                    >
-                      {item.name}
-                    </a>
+                  <Link
+                    href={item.href}
+                    className={`block px-4 py-3 rounded-md text-base font-medium transition-colors ${
+                      router.pathname === item.href
+                        ? 'bg-primary-100 dark:bg-primary-900/20 text-primary-600 dark:text-primary-400'
+                        : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                    }`}
+                  >
+                    {item.name}
                   </Link>
                 </motion.div>
               ))}

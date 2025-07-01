@@ -100,8 +100,8 @@ const Button: React.FC<ButtonProps> = ({
       );
     }
     return (
-      <Link href={href}>
-        <a className="inline-block">{buttonElement}</a>
+      <Link href={href} className="inline-block">
+        {buttonElement}
       </Link>
     );
   }
