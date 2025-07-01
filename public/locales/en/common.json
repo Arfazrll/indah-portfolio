@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "experience": "Experience",
+    "skills": "Skills",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Indah Dwi Afifah",
+    "title": "Undergraduate Insurance & Actuarial Administration",
+    "subtitle": "University of Indonesia | Head of Internal Department at HIMASIRA UI",
+    "description": "Final-year student majoring in Insurance Administration and Actuarial Science with strong academic exposure about claim, accounting, underwriting, risk management, and actuarial science.",
+    "cta": {
+      "contact": "Contact Me",
+      "resume": "Download Resume"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "My Professional Journey",
+    "intro": "I am a final-year student at the University of Indonesia, majoring in Insurance Administration and Actuarial Science. With a strong background in accounting from my vocational high school education, I have developed a comprehensive understanding of the insurance and financial industry.",
+    "passion": "Passion & Motivation",
+    "passionText": "I have a deep passion for the insurance and financial services industry, with a particular focus on risk management and actuarial analysis. My experience as Head of Internal Department at HIMASIRA UI has honed my leadership and human resource management skills.",
+    "goals": "Career Goals",
+    "goalsText": "I am seeking an internship opportunity to apply my analytical and interpersonal skills in a challenging environment, contribute to organizational success, and further develop my career in the insurance and financial services industry."
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "Professional & Organizational Journey",
+    "current": "Present",
+    "viewDetails": "View Details",
+    "responsibilities": "Responsibilities",
+    "achievements": "Achievements"
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "Technical Expertise & Soft Skills",
+    "categories": {
+      "technical": "Technical Skills",
+      "soft": "Soft Skills",
+      "languages": "Languages"
+    },
+    "levels": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced",
+      "expert": "Expert"
+    }
+  },
+  "education": {
+    "title": "Education",
+    "subtitle": "Academic Background",
+    "present": "Present",
+    "gpa": "GPA",
+    "major": "Major",
+    "activities": "Activities"
+  },
+  "contact": {
+    "title": "Contact Me",
+    "subtitle": "Let's Connect",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "An error occurred. Please try again."
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Phone",
+      "linkedin": "LinkedIn",
+      "location": "Location"
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "madeWith": "Made with",
+    "by": "by"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang Saya",
+    "experience": "Pengalaman",
+    "skills": "Keterampilan",
+    "education": "Pendidikan",
+    "contact": "Kontak"
+  },
+  "hero": {
+    "greeting": "Halo, saya",
+    "name": "Indah Dwi Afifah",
+    "title": "Mahasiswa Administrasi Asuransi & Aktuaria",
+    "subtitle": "Universitas Indonesia | Kepala Departemen Internal HIMASIRA UI",
+    "description": "Mahasiswa tahun terakhir jurusan Administrasi Asuransi dan Ilmu Aktuaria dengan paparan akademik yang kuat tentang klaim, akuntansi, underwriting, manajemen risiko, dan ilmu aktuaria.",
+    "cta": {
+      "contact": "Hubungi Saya",
+      "resume": "Unduh CV"
+    }
+  },
+  "about": {
+    "title": "Tentang Saya",
+    "subtitle": "Perjalanan Profesional Saya",
+    "intro": "Saya adalah mahasiswa tahun terakhir di Universitas Indonesia, jurusan Administrasi Asuransi dan Ilmu Aktuaria. Dengan latar belakang yang kuat dalam akuntansi dari pendidikan SMK, saya telah mengembangkan pemahaman komprehensif tentang industri asuransi dan keuangan.",
+    "passion": "Passion & Motivasi",
+    "passionText": "Saya memiliki passion yang mendalam untuk industri asuransi dan keuangan, dengan fokus khusus pada manajemen risiko dan analisis aktuaria. Pengalaman saya sebagai Kepala Departemen Internal di HIMASIRA UI telah mengasah kemampuan kepemimpinan dan manajemen sumber daya manusia saya.",
+    "goals": "Tujuan Karir",
+    "goalsText": "Saya mencari kesempatan magang untuk menerapkan keterampilan analitis dan interpersonal saya dalam lingkungan yang menantang, berkontribusi pada kesuksesan organisasi, dan mengembangkan karir di industri asuransi dan layanan keuangan."
+  },
+  "experience": {
+    "title": "Pengalaman",
+    "subtitle": "Perjalanan Profesional & Organisasi",
+    "current": "Saat Ini",
+    "viewDetails": "Lihat Detail",
+    "responsibilities": "Tanggung Jawab",
+    "achievements": "Pencapaian"
+  },
+  "skills": {
+    "title": "Keterampilan",
+    "subtitle": "Keahlian Teknis & Soft Skills",
+    "categories": {
+      "technical": "Keterampilan Teknis",
+      "soft": "Soft Skills",
+      "languages": "Bahasa"
+    },
+    "levels": {
+      "beginner": "Pemula",
+      "intermediate": "Menengah",
+      "advanced": "Mahir",
+      "expert": "Ahli"
+    }
+  },
+  "education": {
+    "title": "Pendidikan",
+    "subtitle": "Latar Belakang Akademis",
+    "present": "Sekarang",
+    "gpa": "IPK",
+    "major": "Jurusan",
+    "activities": "Aktivitas"
+  },
+  "contact": {
+    "title": "Hubungi Saya",
+    "subtitle": "Mari Terhubung",
+    "form": {
+      "name": "Nama",
+      "email": "Email",
+      "subject": "Subjek",
+      "message": "Pesan",
+      "send": "Kirim Pesan",
+      "sending": "Mengirim...",
+      "success": "Pesan berhasil dikirim!",
+      "error": "Terjadi kesalahan. Silakan coba lagi."
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Telepon",
+      "linkedin": "LinkedIn",
+      "location": "Lokasi"
+    }
+  },
+  "footer": {
+    "rights": "Hak Cipta",
+    "madeWith": "Dibuat dengan",
+    "by": "oleh"
+  },
+  "theme": {
+    "light": "Terang",
+    "dark": "Gelap"
+  }
+}
