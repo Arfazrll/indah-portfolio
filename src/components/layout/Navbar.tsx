@@ -48,14 +48,14 @@ const Navbar: React.FC = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <motion.div
+          <Link href="/">
+            <motion.a
+              className="text-2xl font-bold gradient-text cursor-pointer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="text-2xl font-bold gradient-text"
             >
               IDA
-            </motion.div>
+            </motion.a>
           </Link>
 
           {/* Desktop Navigation */}
@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
             {navItems.map((item) => (
               <Link key={item.href} href={item.href}>
                 <motion.a
-                  className={`relative px-3 py-2 text-sm font-medium transition-colors ${
+                  className={`relative px-3 py-2 text-sm font-medium transition-colors cursor-pointer ${
                     router.pathname === item.href
                       ? 'text-primary-600 dark:text-primary-400'
                       : 'text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400'
@@ -138,7 +138,7 @@ const Navbar: React.FC = () => {
         )}
       </AnimatePresence>
     </nav>
-    );
+  );
 };
 
 export default Navbar;

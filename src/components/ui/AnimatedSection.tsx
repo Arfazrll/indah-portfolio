@@ -1,6 +1,6 @@
+// src/components/ui/AnimatedSection.tsx - FIXED VERSION
 import React from 'react';
-import { motion, useInView } from 'framer-motion';
-import { AnimationConfig } from '../../types';
+import { motion, useInView, Variants, TargetAndTransition } from 'framer-motion';
 
 interface AnimatedSectionProps {
   children: React.ReactNode;
@@ -10,7 +10,7 @@ interface AnimatedSectionProps {
   duration?: number;
   once?: boolean;
   threshold?: number;
-  customAnimation?: AnimationConfig;
+  customVariants?: Variants;
 }
 
 const AnimatedSection: React.FC<AnimatedSectionProps> = ({
@@ -21,51 +21,83 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({
   duration = 0.6,
   once = true,
   threshold = 0.1,
-  customAnimation,
+  customVariants,
 }) => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once, amount: threshold });
 
-  const animations: Record<string, AnimationConfig> = {
+  // Define animation variants with proper typing
+  const animationVariants: Record<string, Variants> = {
     fadeIn: {
-      initial: { opacity: 0 },
-      animate: { opacity: 1 },
+      hidden: { opacity: 0 },
+      visible: { 
+        opacity: 1,
+        transition: {
+          duration,
+          delay,
+          ease: 'easeOut',
+        }
+      },
     },
     slideUp: {
-      initial: { opacity: 0, y: 50 },
-      animate: { opacity: 1, y: 0 },
+      hidden: { opacity: 0, y: 50 },
+      visible: { 
+        opacity: 1, 
+        y: 0,
+        transition: {
+          duration,
+          delay,
+          ease: 'easeOut',
+        }
+      },
     },
     slideLeft: {
-      initial: { opacity: 0, x: 50 },
-      animate: { opacity: 1, x: 0 },
+      hidden: { opacity: 0, x: 50 },
+      visible: { 
+        opacity: 1, 
+        x: 0,
+        transition: {
+          duration,
+          delay,
+          ease: 'easeOut',
+        }
+      },
     },
     slideRight: {
-      initial: { opacity: 0, x: -50 },
-      animate: { opacity: 1, x: 0 },
+      hidden: { opacity: 0, x: -50 },
+      visible: { 
+        opacity: 1, 
+        x: 0,
+        transition: {
+          duration,
+          delay,
+          ease: 'easeOut',
+        }
+      },
     },
     scale: {
-      initial: { opacity: 0, scale: 0.8 },
-      animate: { opacity: 1, scale: 1 },
+      hidden: { opacity: 0, scale: 0.8 },
+      visible: { 
+        opacity: 1, 
+        scale: 1,
+        transition: {
+          duration,
+          delay,
+          ease: 'easeOut',
+        }
+      },
     },
   };
 
-  const selectedAnimation = customAnimation || animations[animation] || animations.fadeIn;
+  const selectedVariants = customVariants || animationVariants[animation] || animationVariants.fadeIn;
 
   return (
     <motion.div
       ref={ref}
       className={className}
-      initial={selectedAnimation.initial}
-      animate={isInView ? selectedAnimation.animate : selectedAnimation.initial}
-      exit={selectedAnimation.exit}
-      transition={{
-        duration,
-        delay,
-        ease: 'easeOut',
-        ...selectedAnimation.transition,
-      }}
-      whileHover={selectedAnimation.whileHover}
-      whileTap={selectedAnimation.whileTap}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      variants={selectedVariants}
     >
       {children}
     </motion.div>

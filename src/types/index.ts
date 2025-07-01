@@ -1,4 +1,3 @@
-// Experience Types
 export interface Experience {
   id: string;
   title: string;
@@ -47,14 +46,14 @@ export interface ContactFormData {
 export interface NavItem {
   name: string;
   href: string;
-  icon?: React.ComponentType<{ className?: string }>;
+  icon?: React.ComponentType<{ className?: string; size?: number }>;
 }
 
-// Social Links Types
+// Social Links Types - UPDATED to include size prop
 export interface SocialLink {
   name: string;
   href: string;
-  icon: React.ComponentType<{ className?: string }>;
+  icon: React.ComponentType<{ className?: string; size?: number }>;
 }
 
 // SEO Types
@@ -63,15 +62,4 @@ export interface SEOProps {
   description?: string;
   image?: string;
   url?: string;
-}
-
-// Animation Types
-export interface AnimationConfig {
-  initial?: object;
-  animate?: object;
-  exit?: object;
-  transition?: object;
-  whileHover?: object;
-  whileTap?: object;
-  viewport?: object;
 }

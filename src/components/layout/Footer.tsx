@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
                     whileTap={{ scale: 0.9 }}
                     aria-label={link.name}
                   >
-                    <Icon size={20} />
+                    <Icon className="w-5 h-5" />
                   </motion.a>
                 );
               })}

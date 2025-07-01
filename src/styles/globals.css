@@ -63,7 +63,7 @@
   }
 
   .container-custom {
-    @apply max-w-7xl mx-auto;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
   .card-shadow {
@@ -90,6 +90,28 @@
 
   .gradient-card {
     @apply bg-gradient-to-br from-white to-gray-50 dark:from-dark-card dark:to-gray-800;
+  }
+
+  /* Shimmer effect for progress bars */
+  .animate-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .animate-shimmer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    );
+    animation: shimmer 2s linear infinite;
   }
 }
 
@@ -132,10 +154,23 @@
   50% { opacity: 0.5; }
 }
 
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
 
 .animate-pulse-slow {
   animation: pulse-slow 3s ease-in-out infinite;
+}
+
+/* Glass morphism effects */
+@supports (backdrop-filter: blur(10px)) {
+  .glass-effect {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
 }
