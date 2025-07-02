@@ -54,7 +54,7 @@ const Navbar: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              IDA
+              Ndaaa
             </motion.span>
           </Link>
 

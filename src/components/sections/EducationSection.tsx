@@ -16,10 +16,10 @@ const EducationSection: React.FC = () => {
       <div className="container-custom">
         <AnimatedSection animation="fadeIn" className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="gradient-text">{t('education.sectionTitle')}</span>
+            <span className="gradient-text">{t('Education')}</span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            {t('education.sectionSubtitle')}
+            {t('A summary of my academic background, where I am currently enhancing my knowledge in actuarial science and building a foundation in accounting.')}
           </p>
         </AnimatedSection>
 
@@ -63,7 +63,7 @@ const EducationSection: React.FC = () => {
             icon={<FaArrowRight />}
             iconPosition="right"
           >
-            {t('education.viewDetails')}
+            {t('View Details')}
           </Button>
         </AnimatedSection>
       </div>

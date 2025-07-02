@@ -32,7 +32,7 @@ const ContactSection: React.FC = () => {
       icon: FaLinkedin,
       label: 'LinkedIn',
       value: 'Indah Dwi Afifah',
-      href: contactInfo.linkedin,
+      href: 'https://www.linkedin.com/in/indah-dwi-afifah/',
       color: 'text-blue-500',
       bgColor: 'bg-blue-100 dark:bg-blue-900/30',
     },
@@ -50,10 +50,10 @@ const ContactSection: React.FC = () => {
       <div className="container-custom">
         <AnimatedSection animation="fadeIn" className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="gradient-text">{t('contact.sectionTitle')}</span>
+            <span className="gradient-text">{t('Contact Information')}</span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            {t('contact.sectionSubtitle')}
+            {t('Here are the best ways to contact me')}
           </p>
         </AnimatedSection>
 
@@ -100,9 +100,9 @@ const ContactSection: React.FC = () => {
 
           <AnimatedSection animation="fadeIn" className="text-center">
             <Card variant="gradient" className="inline-block">
-              <h3 className="text-xl font-bold mb-4">{t('contact.ctaTitle')}</h3>
+              <h3 className="text-xl font-bold mb-4">{t('Contact Me')}</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-6 max-w-md">
-                {t('contact.ctaDescription')}
+                {t('Have any questions? Send me a message')}
               </p>
               <Button
                 href="/contact"
@@ -111,7 +111,7 @@ const ContactSection: React.FC = () => {
                 icon={<FaArrowRight />}
                 iconPosition="right"
               >
-                {t('contact.sendMessage')}
+                {t('Send Message')}
               </Button>
             </Card>
           </AnimatedSection>

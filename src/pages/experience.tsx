@@ -45,7 +45,7 @@ const ExperiencePage: React.FC = () => {
                     <div className="flex items-center text-gray-600 dark:text-gray-400 text-sm">
                       <FaCalendar className="mr-2" />
                       <span>
-                        {exp.startDate} - {exp.current ? t('experience.present') : exp.endDate}
+                        {exp.startDate} - {exp.current ? t('Present') : exp.endDate}
                       </span>
                     </div>
                     {exp.location && (

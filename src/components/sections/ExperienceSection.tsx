@@ -17,10 +17,10 @@ const ExperienceSection: React.FC = () => {
       <div className="container-custom">
         <AnimatedSection animation="fadeIn" className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="gradient-text">{t('experience.sectionTitle')}</span>
+            <span className="gradient-text">{t('Experience')}</span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            {t('experience.sectionSubtitle')}
+            {t('An overview of my leadership roles and responsibilities, showcasing my ability to manage teams, execute projects, and develop key professional skills.')}
           </p>
         </AnimatedSection>
 
@@ -46,7 +46,7 @@ const ExperienceSection: React.FC = () => {
                     <div className="flex items-center text-gray-600 dark:text-gray-400 text-sm">
                       <FaCalendar className="mr-2" />
                       <span>
-                        {exp.startDate} - {exp.current ? t('experience.present') : exp.endDate}
+                        {exp.startDate} - {exp.current ? t('Present') : exp.endDate}
                       </span>
                     </div>
                     {exp.location && (
@@ -73,7 +73,7 @@ const ExperienceSection: React.FC = () => {
             icon={<FaArrowRight />}
             iconPosition="right"
           >
-            {t('experience.viewAll')}
+            {t('View All')}
           </Button>
         </AnimatedSection>
       </div>

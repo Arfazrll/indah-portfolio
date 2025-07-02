@@ -56,13 +56,13 @@ const ContactPage: React.FC = () => {
   const contactDetails = [
     {
       icon: FaEnvelope,
-      label: t('contact.email'),
+      label: t('Email'),
       value: contactInfo.email,
       href: `mailto:${contactInfo.email}`,
     },
     {
       icon: FaPhone,
-      label: t('contact.phone'),
+      label: t('Phone'),
       value: contactInfo.phone,
       href: `tel:${contactInfo.phone}`,
     },
@@ -70,11 +70,11 @@ const ContactPage: React.FC = () => {
       icon: FaLinkedin,
       label: 'LinkedIn',
       value: 'Indah Dwi Afifah',
-      href: contactInfo.linkedin,
+      href: 'https://www.linkedin.com/in/indah-dwi-afifah/',
     },
     {
       icon: FaMapMarkerAlt,
-      label: t('contact.location'),
+      label: t('Location'),
       value: contactInfo.location,
     },
   ];
@@ -94,7 +94,7 @@ const ContactPage: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           <AnimatedSection animation="slideRight">
             <Card variant="bordered" className="h-full">
-              <h2 className="text-2xl font-bold mb-6">{t('contact.getInTouch')}</h2>
+              <h2 className="text-2xl font-bold mb-6">{t('Personal Info')}</h2>
               <div className="space-y-6">
                 {contactDetails.map((detail, index) => {
                   const Icon = detail.icon;
@@ -133,7 +133,7 @@ const ContactPage: React.FC = () => {
 
           <AnimatedSection animation="slideLeft">
             <Card variant="gradient" className="h-full">
-              <h2 className="text-2xl font-bold mb-6">{t('contact.sendMessage')}</h2>
+              <h2 className="text-2xl font-bold mb-6">{t('Send Message')}</h2>
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2">

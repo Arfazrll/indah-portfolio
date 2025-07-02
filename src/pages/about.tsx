@@ -13,26 +13,26 @@ const AboutPage: React.FC = () => {
   const values = [
     {
       icon: FaHeart,
-      title: t('about.values.integrity.title'),
-      description: t('about.values.integrity.description'),
+      title: t('Integrity'),
+      description: t('I believe in upholding the highest standards of honesty and transparency in all aspects of my personal and professional life. Integrity is key to building trust and maintaining strong, lasting relationships, which are essential for both personal growth and organizational success.'),
       color: 'text-red-500',
     },
     {
       icon: FaLightbulb,
-      title: t('about.values.innovation.title'),
-      description: t('about.values.innovation.description'),
+      title: t('Innovation'),
+      description: t('I value creativity and problem-solving, always striving to find innovative solutions to challenges. I am constantly seeking new ways to improve processes and enhance efficiency, believing that innovation drives both individual and organizational progress.'),
       color: 'text-yellow-500',
     },
     {
       icon: FaRocket,
-      title: t('about.values.excellence.title'),
-      description: t('about.values.excellence.description'),
+      title: t('Excellence'),
+      description: t('Striving for excellence is at the core of my approach. I am committed to delivering high-quality results in everything I do, whether in academic achievements, leadership roles, or professional endeavors. Excellence drives me to continually improve and exceed expectations.'),
       color: 'text-blue-500',
     },
     {
       icon: FaUsers,
-      title: t('about.values.collaboration.title'),
-      description: t('about.values.collaboration.description'),
+      title: t('Collaboration'),
+      description: t('I understand that teamwork is essential for success. I value collaboration and believe that working together with others, sharing knowledge, and supporting each other leads to the best outcomes. Building strong, cooperative relationships is something I prioritize in both academic and professional environments.'),
       color: 'text-green-500',
     },
   ];
@@ -52,27 +52,27 @@ const AboutPage: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           <AnimatedSection animation="slideRight">
             <Card variant="bordered" className="h-full">
-              <h2 className="text-2xl font-bold mb-4">{t('about.journey.title')}</h2>
+              <h2 className="text-2xl font-bold mb-4">{t('My Journey')}</h2>
               <div className="space-y-4 text-gray-700 dark:text-gray-300">
-                <p>{t('about.journey.paragraph1')}</p>
-                <p>{t('about.journey.paragraph2')}</p>
-                <p>{t('about.journey.paragraph3')}</p>
+                <p>{t(' I am currently a final-year student at the University of Indonesia, majoring in Insurance Administration and Actuarial Science. Throughout my academic journey, I have gained a strong academic exposure to subjects like claim, accounting, underwriting, risk management, and actuarial science.')}</p>
+                <p>{t('During my time at university, I have also taken on leadership roles, such as being the Head of the Internal Department at HIMASIRA UI, where I was responsible for human resource management and fostering student-university relations. I have organized multiple events and mentoring programs that further sharpened my leadership and organizational skills.')}</p>
+                <p>{t('My journey in leadership and academic excellence has prepared me for challenges in the insurance and financial services industry. I am now looking forward to applying my skills in a professional internship to contribute to the growth of the organization and advance my career.')}</p>
               </div>
             </Card>
           </AnimatedSection>
 
           <AnimatedSection animation="slideLeft">
             <Card variant="gradient" className="h-full">
-              <h2 className="text-2xl font-bold mb-4">{t('about.mission.title')}</h2>
+              <h2 className="text-2xl font-bold mb-4">{t('What Drives Me')}</h2>
               <div className="space-y-4 text-gray-700 dark:text-gray-300">
-                <p>{t('about.mission.paragraph1')}</p>
-                <p>{t('about.mission.paragraph2')}</p>
+                <p>{t('My mission is to develop a deep understanding of the insurance and financial services sectors while contributing to the growth and success of any organization I work with. I aim to continuously improve my skills in actuarial science, risk management, and organizational')}</p>
+                <p>{t('I am passionate about creating environments where teams can thrive and enhance their soft and hard skills, similar to the work I did at HIMASIRA UI with the Internal Department. I seek opportunities that provide both personal and professional growth.')}</p>
                 <div className="mt-6">
-                  <h3 className="text-lg font-semibold mb-2">{t('about.mission.goals')}</h3>
+                  <h3 className="text-lg font-semibold mb-2">{t('Goals for the Future')}</h3>
                   <ul className="list-disc list-inside space-y-2">
-                    <li>{t('about.mission.goal1')}</li>
-                    <li>{t('about.mission.goal2')}</li>
-                    <li>{t('about.mission.goal3')}</li>
+                    <li>{t('To secure an internship in the insurance and financial services industry where I can utilize my skills in analytical thinking and leadership.')}</li>
+                    <li>{t('To develop a strong network within the industry, building relationships with professionals and peers who can provide guidance and mentorship.')}</li>
+                    <li>{t('To continue building leadership and project management skills, particularly in areas like mentoring, program design, and human resource management.')}</li>
                   </ul>
                 </div>
               </div>
@@ -81,7 +81,7 @@ const AboutPage: React.FC = () => {
         </div>
 
         <AnimatedSection animation="fadeIn">
-          <h2 className="text-3xl font-bold text-center mb-12">{t('about.values.title')}</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">{t('My Core Values')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => {
               const Icon = value.icon;

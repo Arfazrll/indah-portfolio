@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
   const socialLinks: SocialLink[] = [
     {
       name: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/indah-dwiafifah',
+      href: 'https://www.linkedin.com/in/indah-dwi-afifah/',
       icon: FaLinkedin,
     },
     {
@@ -99,7 +99,7 @@ const Footer: React.FC = () => {
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-dark-border">
           <div className="text-center text-sm text-gray-600 dark:text-gray-400">
             <p>
-              © {currentYear} Indah Dwi Afifah. {t('footer.rights')}.
+
             </p>
             <p className="mt-2 flex items-center justify-center space-x-1">
               <span>{t('footer.madeWith')}</span>

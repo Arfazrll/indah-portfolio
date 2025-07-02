@@ -104,7 +104,7 @@ const Hero: React.FC = () => {
               </Button>
               
               <Button
-                href="/resume.pdf"
+                href="https://drive.google.com/file/d/1MAxqTNYILjVQpLcASWcwImvccQ1OeNrh/view?usp=sharing"
                 variant="outline"
                 size="lg"
                 icon={<FaDownload />}
@@ -128,14 +128,14 @@ const Hero: React.FC = () => {
               {/* Profile Image Container */}
               <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
                 <div className="w-full h-full rounded-full overflow-hidden border-4 border-white dark:border-dark-card shadow-2xl">
-                  {/* Placeholder for profile image */}
-                  <div className="w-full h-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center">
-                    <span className="text-6xl md:text-7xl lg:text-8xl font-bold text-white">
-                      IDA
-                    </span>
-                  </div>
+                  {/* Add your image source URL here */}
+                  <img 
+                    src="images\Bubub.jpg" 
+                    alt="Profile Picture" 
+                    className="w-full h-full object-cover" 
+                  />
                 </div>
-                
+  
                 {/* Floating elements */}
                 <motion.div
                   className="absolute -top-4 -right-4 w-20 h-20 bg-primary-500 rounded-full opacity-30"
