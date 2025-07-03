@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import AnimatedBackground from '../ui/AnimatedBackground';
 import { SEOProps } from '../../types';
 
 interface LayoutProps {
@@ -74,7 +75,10 @@ const Layout: React.FC<LayoutProps> = ({ children, seo = {} }) => {
         />
       </Head>
 
-      <div className="min-h-screen flex flex-col bg-white dark:bg-dark-bg text-gray-900 dark:text-gray-100">
+      <div className="min-h-screen flex flex-col bg-white dark:bg-dark-bg text-gray-900 dark:text-gray-100 relative">
+        {/* Animated Background */}
+        <AnimatedBackground />
+        
         <Navbar />
         
         <AnimatePresence mode="wait">
@@ -84,7 +88,7 @@ const Layout: React.FC<LayoutProps> = ({ children, seo = {} }) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="flex-grow pt-16 sm:pt-20"
+            className="flex-grow pt-16 sm:pt-20 relative z-10"
           >
             {children}
           </motion.main>
