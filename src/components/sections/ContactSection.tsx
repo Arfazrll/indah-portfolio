@@ -13,7 +13,7 @@ const ContactSection: React.FC = () => {
   const contactMethods = [
     {
       icon: FaEnvelope,
-      label: t('contact.email'),
+      label: t('Email'),
       value: contactInfo.email,
       href: `mailto:${contactInfo.email}`,
       color: 'text-red-500',
@@ -21,7 +21,7 @@ const ContactSection: React.FC = () => {
     },
     {
       icon: FaPhone,
-      label: t('contact.phone'),
+      label: t('Phone'),
       value: contactInfo.phone,
       href: `tel:${contactInfo.phone}`,
       color: 'text-green-500',
@@ -37,7 +37,7 @@ const ContactSection: React.FC = () => {
     },
     {
       icon: FaMapMarkerAlt,
-      label: t('contact.location'),
+      label: t('Location'),
       value: 'Jakarta, Indonesia',
       color: 'text-purple-500',
       bgColor: 'bg-purple-100 dark:bg-purple-900/30',

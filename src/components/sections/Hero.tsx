@@ -1,12 +1,30 @@
-import React from 'react';
+// src/components/sections/Hero.tsx
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'next-i18next';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { FaDownload, FaEnvelope } from 'react-icons/fa';
 import Button from '../ui/Button';
 import AnimatedSection from '../ui/AnimatedSection';
 
 const Hero: React.FC = () => {
   const { t } = useTranslation('common');
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  // Array of images for carousel
+  const images = [
+    '/images/profile1.jpg',
+    '/images/profile2.jpg', 
+    '/images/profile3.jpg'
+  ];
+
+  // Auto-switch images every 6 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 6000);
+
+    return () => clearInterval(interval);
+  }, [images.length]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -44,7 +62,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center section-padding bg-section-primary">
+    <section className="min-h-screen flex items-center justify-center section-padding bg-section-primary relative overflow-hidden">
       <div className="container-custom relative z-10">
         <motion.div
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
@@ -52,9 +70,9 @@ const Hero: React.FC = () => {
           initial="hidden"
           animate="visible"
         >
-          {/* Text Content with enhanced glass effect */}
+          {/* Text Content */}
           <div className="order-2 lg:order-1 text-center lg:text-left">
-            <div className="glass-effect-strong rounded-2xl p-8 lg:p-10">
+            <div className="glass-effect-strong rounded-2xl p-8 lg:p-10 shadow-2xl hover:shadow-3xl transition-shadow duration-300">
               <motion.p
                 variants={itemVariants}
                 className="text-lg text-gray-600 dark:text-gray-400 mb-2"
@@ -100,7 +118,7 @@ const Hero: React.FC = () => {
                   size="lg"
                   icon={<FaEnvelope />}
                   iconPosition="left"
-                  className="shadow-lg hover:shadow-xl"
+                  className="shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
                 >
                   {t('hero.cta.contact')}
                 </Button>
@@ -112,7 +130,7 @@ const Hero: React.FC = () => {
                   icon={<FaDownload />}
                   iconPosition="right"
                   external
-                  className="backdrop-blur-sm"
+                  className="backdrop-blur-sm hover:backdrop-blur-lg transform hover:scale-105 transition-all duration-300"
                 >
                   {t('hero.cta.resume')}
                 </Button>
@@ -120,31 +138,55 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Image/Visual Element */}
+          {/* Image Carousel */}
           <motion.div
             variants={imageVariants}
             className="order-1 lg:order-2 flex justify-center"
           >
             <div className="relative">
-              {/* Background decoration with glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full opacity-20 blur-3xl animate-pulse-slow" />
+              {/* Background decoration */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-400 to-purple-600 rounded-full opacity-20 blur-3xl animate-pulse-slow scale-110" />
               
-              {/* Profile Image Container with glass border */}
+              {/* Profile Image Carousel Container */}
               <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
-                <div className="w-full h-full rounded-full overflow-hidden border-4 border-white/50 dark:border-white/20 shadow-2xl glass-effect">
-                  <img 
-                    src="images/Bubub.jpg" 
-                    alt="Profile Picture" 
-                    className="w-full h-full object-cover" 
-                  />
+                <div className="w-full h-full rounded-full overflow-hidden border-4 border-white/50 dark:border-white/20 shadow-2xl glass-effect relative">
+                  <AnimatePresence mode="wait">
+                    <motion.img
+                      key={currentImageIndex}
+                      src={images[currentImageIndex]}
+                      alt="Profile Picture"
+                      className="w-full h-full object-cover"
+                      initial={{ opacity: 0, scale: 1.1 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.9 }}
+                      transition={{ duration: 0.8, ease: 'easeInOut' }}
+                    />
+                  </AnimatePresence>
+                  
+                  {/* Carousel Indicators */}
+                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                    {images.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentImageIndex(index)}
+                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                          index === currentImageIndex
+                            ? 'bg-white w-8'
+                            : 'bg-white/50 hover:bg-white/70'
+                        }`}
+                        aria-label={`Go to image ${index + 1}`}
+                      />
+                    ))}
+                  </div>
                 </div>
-  
-                {/* Floating elements with glass effect */}
+
+                {/* Floating elements */}
                 <motion.div
-                  className="absolute -top-4 -right-4 w-20 h-20 rounded-full glass-effect"
+                  className="absolute -top-4 -right-4 w-20 h-20 rounded-full glass-effect shadow-lg"
                   animate={{
                     y: [0, -20, 0],
                     scale: [1, 1.1, 1],
+                    rotate: [0, 180, 360],
                   }}
                   transition={{
                     duration: 4,
@@ -155,10 +197,11 @@ const Hero: React.FC = () => {
                   <div className="w-full h-full bg-gradient-to-br from-primary-400/30 to-purple-400/30 rounded-full" />
                 </motion.div>
                 <motion.div
-                  className="absolute -bottom-4 -left-4 w-16 h-16 rounded-full glass-effect"
+                  className="absolute -bottom-4 -left-4 w-16 h-16 rounded-full glass-effect shadow-lg"
                   animate={{
                     y: [0, 20, 0],
                     scale: [1, 1.2, 1],
+                    rotate: [360, 180, 0],
                   }}
                   transition={{
                     duration: 3,
@@ -172,23 +215,6 @@ const Hero: React.FC = () => {
               </div>
             </div>
           </motion.div>
-        </motion.div>
-
-        {/* Scroll Indicator with glass effect */}
-        <motion.div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          animate={{
-            y: [0, 10, 0],
-          }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-        >
-          <div className="w-6 h-10 border-2 border-gray-400/50 dark:border-gray-600/50 rounded-full flex justify-center glass-effect">
-            <div className="w-1 h-3 bg-gray-400 dark:bg-gray-600 rounded-full mt-2" />
-          </div>
         </motion.div>
       </div>
     </section>

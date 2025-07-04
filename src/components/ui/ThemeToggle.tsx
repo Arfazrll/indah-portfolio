@@ -1,3 +1,4 @@
+// src/components/ui/ThemeToggle.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import { HiSun, HiMoon } from 'react-icons/hi';
@@ -9,7 +10,7 @@ const ThemeToggle: React.FC = () => {
   return (
     <motion.button
       onClick={toggleTheme}
-      className="relative p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+      className="relative p-2.5 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-all duration-200 shadow-md hover:shadow-lg"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}

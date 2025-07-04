@@ -1,3 +1,4 @@
+// src/components/ui/Card.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -22,12 +23,12 @@ const Card: React.FC<CardProps> = ({
   animate = true,
   delay = 0,
 }) => {
-  const baseStyles = 'rounded-xl transition-all duration-300';
+  const baseStyles = 'rounded-xl transition-all duration-300 relative overflow-hidden';
   
   const variants = {
     default: 'bg-white dark:bg-dark-card',
     bordered: 'bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border',
-    elevated: 'bg-white dark:bg-dark-card shadow-lg',
+    elevated: 'bg-white dark:bg-dark-card shadow-lg hover:shadow-2xl',
     gradient: 'gradient-card border border-gray-100 dark:border-gray-700',
   };
 
@@ -39,7 +40,7 @@ const Card: React.FC<CardProps> = ({
   };
 
   const hoverStyles = hover
-    ? 'hover:shadow-xl hover:-translate-y-1 cursor-pointer'
+    ? 'hover:shadow-xl cursor-pointer transform-gpu'
     : '';
 
   const combinedClassName = `
@@ -51,9 +52,25 @@ const Card: React.FC<CardProps> = ({
   `.trim();
 
   const cardContent = (
-    <div className={combinedClassName} onClick={onClick}>
-      {children}
-    </div>
+    <motion.div
+      className={combinedClassName}
+      onClick={onClick}
+      whileHover={hover ? {
+        scale: 1.02,
+        rotateX: -5,
+        rotateY: 5,
+        transition: { duration: 0.3 }
+      } : {}}
+      style={{ transformStyle: 'preserve-3d', perspective: 1000 }}
+    >
+      {/* Inner shadow for depth */}
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/5 dark:to-black/20 pointer-events-none" />
+      
+      {/* Content */}
+      <div className="relative z-10">
+        {children}
+      </div>
+    </motion.div>
   );
 
   if (animate) {

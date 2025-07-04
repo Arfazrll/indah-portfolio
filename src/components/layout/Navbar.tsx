@@ -1,3 +1,4 @@
+// src/components/layout/Navbar.tsx
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -41,7 +42,7 @@ const Navbar: React.FC = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'glass-effect shadow-lg'
+          ? 'glass-effect-strong shadow-lg'
           : 'bg-transparent'
       }`}
     >
@@ -50,7 +51,7 @@ const Navbar: React.FC = () => {
           {/* Logo */}
           <Link href="/">
             <motion.span
-              className="text-2xl font-bold gradient-text cursor-pointer"
+              className="text-2xl sm:text-3xl font-bold gradient-text cursor-pointer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -60,43 +61,68 @@ const Navbar: React.FC = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <Link key={item.href} href={item.href}>
-                <motion.span
-                  className={`relative px-3 py-2 text-sm font-medium transition-colors cursor-pointer ${
-                    router.pathname === item.href
-                      ? 'text-primary-600 dark:text-primary-400'
-                      : 'text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400'
-                  }`}
-                  whileHover={{ y: -2 }}
-                  whileTap={{ y: 0 }}
-                >
-                  {item.name}
-                  {router.pathname === item.href && (
-                    <motion.div
-                      layoutId="navbar-indicator"
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary-600 dark:bg-primary-400"
-                      initial={false}
-                      transition={{ type: 'spring', stiffness: 500, damping: 30 }}
-                    />
-                  )}
-                </motion.span>
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              const isActive = router.asPath === item.href || 
+                (item.href !== '/#' && router.asPath.includes(item.href.replace('/#', '')));
+              
+              return (
+                <Link key={item.href} href={item.href}>
+                  <motion.span
+                    className={`relative px-3 py-2 text-sm font-semibold transition-colors cursor-pointer ${
+                      isActive
+                        ? 'text-primary-600 dark:text-primary-400'
+                        : 'text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400'
+                    }`}
+                    whileHover={{ y: -2 }}
+                    whileTap={{ y: 0 }}
+                  >
+                    {item.name}
+                    {isActive && (
+                      <motion.div
+                        layoutId="navbar-indicator"
+                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary-600 dark:bg-primary-400"
+                        initial={false}
+                        transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+                      />
+                    )}
+                  </motion.span>
+                </Link>
+              );
+            })}
           </div>
 
           {/* Right Side Controls */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-3">
             <ThemeToggle />
             <LanguageToggle />
             
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary-500"
+              className="lg:hidden p-2 rounded-md text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all duration-200"
               aria-label="Toggle menu"
             >
-              {isOpen ? <HiX size={24} /> : <HiMenu size={24} />}
+              <AnimatePresence mode="wait">
+                {isOpen ? (
+                  <motion.div
+                    key="close"
+                    initial={{ rotate: -90 }}
+                    animate={{ rotate: 0 }}
+                    exit={{ rotate: 90 }}
+                  >
+                    <HiX size={24} />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="menu"
+                    initial={{ rotate: 90 }}
+                    animate={{ rotate: 0 }}
+                    exit={{ rotate: -90 }}
+                  >
+                    <HiMenu size={24} />
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </button>
           </div>
         </div>
@@ -110,28 +136,33 @@ const Navbar: React.FC = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden glass-effect border-t border-gray-200 dark:border-dark-border"
+            className="lg:hidden glass-effect-strong border-t border-gray-200 dark:border-dark-border"
           >
             <div className="container-custom py-4">
-              {navItems.map((item, index) => (
-                <motion.div
-                  key={item.href}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                >
-                  <Link
-                    href={item.href}
-                    className={`block px-4 py-3 rounded-md text-base font-medium transition-colors ${
-                      router.pathname === item.href
-                        ? 'bg-primary-100 dark:bg-primary-900/20 text-primary-600 dark:text-primary-400'
-                        : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
-                    }`}
+              {navItems.map((item, index) => {
+                const isActive = router.asPath === item.href || 
+                  (item.href !== '/#' && router.asPath.includes(item.href.replace('/#', '')));
+                
+                return (
+                  <motion.div
+                    key={item.href}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1 }}
                   >
-                    {item.name}
-                  </Link>
-                </motion.div>
-              ))}
+                    <Link
+                      href={item.href}
+                      className={`block px-4 py-3 rounded-md text-base font-medium transition-all duration-200 ${
+                        isActive
+                          ? 'bg-primary-100 dark:bg-primary-900/20 text-primary-600 dark:text-primary-400'
+                          : 'text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800'
+                      }`}
+                    >
+                      {item.name}
+                    </Link>
+                  </motion.div>
+                );
+              })}
             </div>
           </motion.div>
         )}

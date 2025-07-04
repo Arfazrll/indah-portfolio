@@ -1,11 +1,12 @@
+// next-i18next.config.js
 module.exports = {
   i18n: {
-    defaultLocale: 'id',
+    defaultLocale: 'en', // Changed from 'id' to 'en'
     locales: ['id', 'en'],
     localeDetection: false,
   },
   fallbackLng: {
-    default: ['id'],
+    default: ['en'], // Changed from 'id' to 'en'
   },
   supportedLngs: ['id', 'en'],
   ns: ['common'],

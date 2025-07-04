@@ -1,3 +1,4 @@
+// src/components/ui/ProgressBar.tsx
 import React, { useEffect, useState } from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion';
 
@@ -26,11 +27,11 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   const colors = {
-    primary: 'bg-primary-500 dark:bg-primary-400',
-    secondary: 'bg-gray-500 dark:bg-gray-400',
-    success: 'bg-green-500 dark:bg-green-400',
-    warning: 'bg-yellow-500 dark:bg-yellow-400',
-    danger: 'bg-red-500 dark:bg-red-400',
+    primary: 'bg-gradient-to-r from-primary-500 to-primary-600 dark:from-primary-400 dark:to-primary-500',
+    secondary: 'bg-gradient-to-r from-gray-500 to-gray-600 dark:from-gray-400 dark:to-gray-500',
+    success: 'bg-gradient-to-r from-green-500 to-green-600 dark:from-green-400 dark:to-green-500',
+    warning: 'bg-gradient-to-r from-yellow-500 to-yellow-600 dark:from-yellow-400 dark:to-yellow-500',
+    danger: 'bg-gradient-to-r from-red-500 to-red-600 dark:from-red-400 dark:to-red-500',
   };
 
   const heights = {
@@ -65,20 +66,25 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
             </span>
           )}
           {showPercentage && (
-            <span className="text-sm font-medium text-gray-600 dark:text-gray-400">
+            <motion.span 
+              className="text-sm font-semibold text-gray-600 dark:text-gray-400"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: delay + 0.5 }}
+            >
               {percentage}%
-            </span>
+            </motion.span>
           )}
         </div>
       )}
-      <div className={`w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden ${heights[height]}`}>
+      <div className={`w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden ${heights[height]} shadow-inner`}>
         <motion.div
-          className={`h-full ${colors[color]} rounded-full relative overflow-hidden`}
+          className={`h-full ${colors[color]} rounded-full relative overflow-hidden shadow-sm`}
           initial={{ width: 0 }}
           animate={controls}
         >
-          {/* Shimmer effect */}
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer" />
+          {/* Enhanced shimmer effect */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer" />
         </motion.div>
       </div>
     </div>
