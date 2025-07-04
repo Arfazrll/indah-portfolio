@@ -54,30 +54,30 @@ const ContactPage: React.FC = () => {
   };
 
   const contactDetails = [
-    {
-      icon: FaEnvelope,
-      label: t('Email'),
-      value: contactInfo.email,
-      href: `mailto:${contactInfo.email}`,
-    },
-    {
-      icon: FaPhone,
-      label: t('Phone'),
-      value: contactInfo.phone,
-      href: `tel:${contactInfo.phone}`,
-    },
-    {
-      icon: FaLinkedin,
-      label: 'LinkedIn',
-      value: 'Indah Dwi Afifah',
-      href: 'https://www.linkedin.com/in/indah-dwi-afifah/',
-    },
-    {
-      icon: FaMapMarkerAlt,
-      label: t('Location'),
-      value: contactInfo.location,
-    },
-  ];
+  {
+    icon: FaEnvelope,
+    label: t('contact.info.email'),
+    value: contactInfo.email,
+    href: `mailto:${contactInfo.email}`,
+  },
+  {
+    icon: FaPhone,
+    label: t('contact.info.phone'),
+    value: contactInfo.phone,
+    href: `tel:${contactInfo.phone}`,
+  },
+  {
+    icon: FaLinkedin,
+    label: t('contact.info.linkedin'),
+    value: 'Indah Dwi Afifah',
+    href: 'https://www.linkedin.com/in/indah-dwi-afifah/',
+  },
+  {
+    icon: FaMapMarkerAlt,
+    label: t('contact.info.location'),
+    value: contactInfo.location,
+  },
+];
 
   return (
     <div className="min-h-screen section-padding">

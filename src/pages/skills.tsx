@@ -14,10 +14,10 @@ const SkillsPage: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<'all' | 'technical' | 'soft' | 'language'>('all');
 
   const categories = [
-    { id: 'all', label: t('All'), icon: null },
+    { id: 'all', label: t('skills.all'), icon: null },
     { id: 'technical', label: t('skills.categories.technical'), icon: FaCode },
     { id: 'soft', label: t('skills.categories.soft'), icon: FaUsers },
-    { id: 'language', label: t('Language'), icon: FaLanguage },
+    { id: 'language', label: t('skills.categories.languages'), icon: FaLanguage },
   ];
 
   const filteredSkills = activeCategory === 'all' 

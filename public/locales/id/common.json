@@ -25,19 +25,77 @@
     "passion": "Passion & Motivasi",
     "passionText": "Saya memiliki passion yang mendalam untuk industri asuransi dan keuangan, dengan fokus khusus pada manajemen risiko dan analisis aktuaria. Pengalaman saya sebagai Kepala Departemen Internal di HIMASIRA UI telah mengasah kemampuan kepemimpinan dan manajemen sumber daya manusia saya.",
     "goals": "Tujuan Karir",
-    "goalsText": "Saya mencari kesempatan magang untuk menerapkan keterampilan analitis dan interpersonal saya dalam lingkungan yang menantang, berkontribusi pada kesuksesan organisasi, dan mengembangkan karir di industri asuransi dan layanan keuangan."
+    "goalsText": "Saya mencari kesempatan magang untuk menerapkan keterampilan analitis dan interpersonal saya dalam lingkungan yang menantang, berkontribusi pada kesuksesan organisasi, dan mengembangkan karir di industri asuransi dan layanan keuangan.",
+    "getToKnowMe": "Kenali Saya",
+    "studentDescription": "Mahasiswa di Universitas Indonesia, dengan spesialisasi Asuransi dan Ilmu Aktuaria, dengan fokus pada manajemen risiko.",
+    "introduction": "Perkenalan",
+    "introText1": "Saya adalah mahasiswa tahun terakhir di Universitas Indonesia, dengan spesialisasi Administrasi Asuransi dan Ilmu Aktuaria. Sepanjang perjalanan akademik saya, saya telah mengembangkan fondasi yang kuat dalam bidang-bidang utama seperti manajemen klaim, akuntansi, underwriting, manajemen risiko, dan ilmu aktuaria.",
+    "introText2": "Di luar akademik, saya telah aktif mengambil peran kepemimpinan, seperti menjabat sebagai Kepala Departemen Internal di HIMASIRA UI, di mana saya bertanggung jawab untuk mengelola sumber daya manusia dan hubungan mahasiswa-universitas. Saya juga telah mengorganisir berbagai program, termasuk inisiatif mentoring, untuk lebih meningkatkan keterampilan kepemimpinan saya.",
+    "learnMore": "Pelajari Lebih Lanjut",
+    "highlights": {
+      "education": {
+        "title": "Pendidikan",
+        "description": "Saat ini saya sedang menempuh gelar dalam Administrasi Asuransi dan Ilmu Aktuaria di Universitas Indonesia, di mana saya telah memperoleh pengetahuan dalam penilaian risiko, metodologi aktuaria, analisis keuangan, dan lainnya. Ini telah membentuk pemahaman saya tentang aspek teoretis dan praktis dari industri ini."
+      },
+      "leadership": {
+        "title": "Pengalaman Kepemimpinan",
+        "description": "Sebagai Kepala Departemen Internal di HIMASIRA UI, saya memimpin inisiatif yang mendorong kolaborasi, merancang program pengembangan, dan menciptakan komunitas yang berkembang dalam departemen. Peran saya telah mengembangkan lebih lanjut keterampilan saya dalam manajemen sumber daya manusia, kepemimpinan tim, dan eksekusi program."
+      },
+      "achievements": {
+        "title": "Pencapaian",
+        "description": "Sepanjang upaya akademik dan ekstrakurikuler saya, saya telah diakui atas kontribusi saya pada organisasi mahasiswa, termasuk keterlibatan saya dalam mengorganisir acara besar seperti Kunjungan Perusahaan ke Bursa Efek Indonesia. Selain itu, saya telah memperoleh sertifikasi di berbagai bidang seperti Digital Marketing dan Microsoft Office, yang menunjukkan dedikasi saya untuk pembelajaran dan pertumbuhan berkelanjutan."
+      }
+    }
+  },
+  "aboutPage": {
+    "myJourney": "Perjalanan Saya",
+    "journey1": "Saat ini saya adalah mahasiswa tahun terakhir di Universitas Indonesia, jurusan Administrasi Asuransi dan Ilmu Aktuaria. Sepanjang perjalanan akademik saya, saya telah memperoleh paparan akademik yang kuat terhadap mata kuliah seperti klaim, akuntansi, underwriting, manajemen risiko, dan ilmu aktuaria.",
+    "journey2": "Selama masa kuliah, saya juga mengambil peran kepemimpinan, seperti menjadi Kepala Departemen Internal di HIMASIRA UI, di mana saya bertanggung jawab atas manajemen sumber daya manusia dan membina hubungan mahasiswa-universitas. Saya telah mengorganisir berbagai acara dan program mentoring yang semakin mengasah keterampilan kepemimpinan dan organisasi saya.",
+    "journey3": "Perjalanan saya dalam kepemimpinan dan keunggulan akademik telah mempersiapkan saya untuk tantangan di industri asuransi dan layanan keuangan. Saya sekarang menantikan untuk menerapkan keterampilan saya dalam magang profesional untuk berkontribusi pada pertumbuhan organisasi dan memajukan karir saya.",
+    "whatDrivesMe": "Apa yang Mendorong Saya",
+    "drives1": "Misi saya adalah mengembangkan pemahaman mendalam tentang sektor asuransi dan layanan keuangan sambil berkontribusi pada pertumbuhan dan kesuksesan organisasi tempat saya bekerja. Saya bertujuan untuk terus meningkatkan keterampilan saya dalam ilmu aktuaria, manajemen risiko, dan keunggulan organisasi.",
+    "drives2": "Saya bersemangat menciptakan lingkungan di mana tim dapat berkembang dan meningkatkan keterampilan keras dan lunak mereka, mirip dengan pekerjaan yang saya lakukan di HIMASIRA UI dengan Departemen Internal. Saya mencari peluang yang memberikan pertumbuhan pribadi dan profesional.",
+    "futureGoals": "Tujuan Masa Depan",
+    "goal1": "Mendapatkan magang di industri asuransi dan layanan keuangan di mana saya dapat memanfaatkan keterampilan saya dalam pemikiran analitis dan kepemimpinan.",
+    "goal2": "Mengembangkan jaringan yang kuat dalam industri, membangun hubungan dengan profesional dan rekan yang dapat memberikan bimbingan dan mentoring.",
+    "goal3": "Terus membangun keterampilan kepemimpinan dan manajemen proyek, terutama di bidang seperti mentoring, desain program, dan manajemen sumber daya manusia.",
+    "coreValues": "Nilai-Nilai Inti Saya",
+    "values": {
+      "integrity": {
+        "title": "Integritas",
+        "description": "Saya percaya dalam menjunjung standar tertinggi kejujuran dan transparansi dalam semua aspek kehidupan pribadi dan profesional saya. Integritas adalah kunci untuk membangun kepercayaan dan mempertahankan hubungan yang kuat dan langgeng, yang penting untuk pertumbuhan pribadi dan kesuksesan organisasi."
+      },
+      "innovation": {
+        "title": "Inovasi",
+        "description": "Saya menghargai kreativitas dan pemecahan masalah, selalu berusaha menemukan solusi inovatif untuk tantangan. Saya terus mencari cara baru untuk meningkatkan proses dan meningkatkan efisiensi, percaya bahwa inovasi mendorong kemajuan individu dan organisasi."
+      },
+      "excellence": {
+        "title": "Keunggulan",
+        "description": "Berjuang untuk keunggulan adalah inti dari pendekatan saya. Saya berkomitmen untuk memberikan hasil berkualitas tinggi dalam segala hal yang saya lakukan, baik dalam pencapaian akademik, peran kepemimpinan, atau upaya profesional. Keunggulan mendorong saya untuk terus meningkat dan melampaui harapan."
+      },
+      "collaboration": {
+        "title": "Kolaborasi",
+        "description": "Saya memahami bahwa kerja tim sangat penting untuk kesuksesan. Saya menghargai kolaborasi dan percaya bahwa bekerja bersama dengan orang lain, berbagi pengetahuan, dan saling mendukung mengarah pada hasil terbaik. Membangun hubungan yang kuat dan kooperatif adalah sesuatu yang saya prioritaskan di lingkungan akademik dan profesional."
+      }
+    }
   },
   "experience": {
     "title": "Pengalaman",
     "subtitle": "Perjalanan Profesional & Organisasi",
+    "description": "Gambaran umum peran dan tanggung jawab kepemimpinan saya, menunjukkan kemampuan saya untuk mengelola tim, melaksanakan proyek, dan mengembangkan keterampilan profesional utama.",
     "current": "Saat Ini",
     "viewDetails": "Lihat Detail",
+    "viewAll": "Lihat Semua",
     "responsibilities": "Tanggung Jawab",
     "achievements": "Pencapaian"
   },
   "skills": {
     "title": "Keterampilan",
     "subtitle": "Keahlian Teknis & Soft Skills",
+    "description": "Ringkasan keterampilan dan kemampuan yang mendefinisikan pekerjaan saya.",
+    "all": "Semua",
+    "viewAll": "Lihat Semua",
+    "certifications": "Sertifikasi",
     "categories": {
       "technical": "Keterampilan Teknis",
       "soft": "Soft Skills",
@@ -53,19 +111,30 @@
   "education": {
     "title": "Pendidikan",
     "subtitle": "Latar Belakang Akademis",
+    "description": "Ringkasan latar belakang akademis saya, di mana saya saat ini meningkatkan pengetahuan saya dalam ilmu aktuaria dan membangun fondasi dalam akuntansi.",
     "present": "Sekarang",
     "gpa": "IPK",
     "major": "Jurusan",
-    "activities": "Aktivitas"
+    "activities": "Aktivitas",
+    "viewDetails": "Lihat Detail"
   },
   "contact": {
     "title": "Hubungi Saya",
     "subtitle": "Mari Terhubung",
+    "personalInfo": "Info Personal",
+    "sendMessage": "Kirim Pesan",
+    "hereAreBestWays": "Berikut adalah cara terbaik untuk menghubungi saya",
+    "haveQuestions": "Punya pertanyaan? Kirim pesan kepada saya",
     "form": {
       "name": "Nama",
+      "nameRequired": "Nama wajib diisi",
       "email": "Email",
+      "emailRequired": "Email wajib diisi",
+      "emailInvalid": "Alamat email tidak valid",
       "subject": "Subjek",
+      "subjectRequired": "Subjek wajib diisi",
       "message": "Pesan",
+      "messageRequired": "Pesan wajib diisi",
       "send": "Kirim Pesan",
       "sending": "Mengirim...",
       "success": "Pesan berhasil dikirim!",
@@ -86,5 +155,9 @@
   "theme": {
     "light": "Terang",
     "dark": "Gelap"
+  },
+  "common": {
+    "present": "Sekarang",
+    "language": "Bahasa"
   }
 }

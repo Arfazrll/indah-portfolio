@@ -35,10 +35,10 @@ const SkillsSection: React.FC = () => {
     <SectionWrapper id="skills" variant="secondary">
       <AnimatedSection animation="fadeIn" className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          <span className="gradient-text">{t('Skills')}</span>
+          <span className="gradient-text">{t('skills.title')}</span>
         </h2>
         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-          {t('A summary of the skills and capabilities that define my work.')}
+          {t('skills.description')}
         </p>
       </AnimatedSection>
 
@@ -85,7 +85,7 @@ const SkillsSection: React.FC = () => {
           iconPosition="right"
           className="backdrop-blur-sm"
         >
-          {t('View All')}
+          {t('skills.viewAll')}
         </Button>
       </AnimatedSection>
     </SectionWrapper>

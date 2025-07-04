@@ -25,19 +25,77 @@
     "passion": "Passion & Motivation",
     "passionText": "I have a deep passion for the insurance and financial services industry, with a particular focus on risk management and actuarial analysis. My experience as Head of Internal Department at HIMASIRA UI has honed my leadership and human resource management skills.",
     "goals": "Career Goals",
-    "goalsText": "I am seeking an internship opportunity to apply my analytical and interpersonal skills in a challenging environment, contribute to organizational success, and further develop my career in the insurance and financial services industry."
+    "goalsText": "I am seeking an internship opportunity to apply my analytical and interpersonal skills in a challenging environment, contribute to organizational success, and further develop my career in the insurance and financial services industry.",
+    "getToKnowMe": "Get to Know Me",
+    "studentDescription": "Student at the University of Indonesia, specializing in Insurance and Actuarial Science, with a focus on risk management.",
+    "introduction": "Introduction",
+    "introText1": "I am a final-year student at the University of Indonesia, specializing in Insurance Administration and Actuarial Science. Throughout my academic journey, I have developed a strong foundation in key areas like claims management, accounting, underwriting, risk management, and actuarial science.",
+    "introText2": "Outside of academics, I have actively taken on leadership roles, such as serving as the Head of the Internal Department at HIMASIRA UI, where I've been responsible for managing human resources and student-university relations. I've also organized various programs, including mentoring initiatives, to further enhance my leadership skills.",
+    "learnMore": "Learn More",
+    "highlights": {
+      "education": {
+        "title": "Education",
+        "description": "I am currently pursuing a degree in Insurance Administration and Actuarial Science at the University of Indonesia, where I have gained knowledge in risk assessment, actuarial methodologies, financial analysis, and more. This has shaped my understanding of both theoretical and practical aspects of the industry."
+      },
+      "leadership": {
+        "title": "Leadership Experience",
+        "description": "As the Head of the Internal Department at HIMASIRA UI, I led initiatives that fostered collaboration, designed development programs, and created a thriving community within the department. My role has further developed my skills in human resource management, team leadership, and program execution."
+      },
+      "achievements": {
+        "title": "Achievements",
+        "description": "Throughout my academic and extracurricular endeavors, I have been recognized for my contributions to student organizations, including my involvement in organizing major events such as the Company Visit to the Indonesia Stock Exchange. Additionally, I have earned certifications in various fields like Digital Marketing and Microsoft Office, underscoring my dedication to continuous learning and growth."
+      }
+    }
+  },
+  "aboutPage": {
+    "myJourney": "My Journey",
+    "journey1": "I am currently a final-year student at the University of Indonesia, majoring in Insurance Administration and Actuarial Science. Throughout my academic journey, I have gained a strong academic exposure to subjects like claim, accounting, underwriting, risk management, and actuarial science.",
+    "journey2": "During my time at university, I have also taken on leadership roles, such as being the Head of the Internal Department at HIMASIRA UI, where I was responsible for human resource management and fostering student-university relations. I have organized multiple events and mentoring programs that further sharpened my leadership and organizational skills.",
+    "journey3": "My journey in leadership and academic excellence has prepared me for challenges in the insurance and financial services industry. I am now looking forward to applying my skills in a professional internship to contribute to the growth of the organization and advance my career.",
+    "whatDrivesMe": "What Drives Me",
+    "drives1": "My mission is to develop a deep understanding of the insurance and financial services sectors while contributing to the growth and success of any organization I work with. I aim to continuously improve my skills in actuarial science, risk management, and organizational excellence.",
+    "drives2": "I am passionate about creating environments where teams can thrive and enhance their soft and hard skills, similar to the work I did at HIMASIRA UI with the Internal Department. I seek opportunities that provide both personal and professional growth.",
+    "futureGoals": "Goals for the Future",
+    "goal1": "To secure an internship in the insurance and financial services industry where I can utilize my skills in analytical thinking and leadership.",
+    "goal2": "To develop a strong network within the industry, building relationships with professionals and peers who can provide guidance and mentorship.",
+    "goal3": "To continue building leadership and project management skills, particularly in areas like mentoring, program design, and human resource management.",
+    "coreValues": "My Core Values",
+    "values": {
+      "integrity": {
+        "title": "Integrity",
+        "description": "I believe in upholding the highest standards of honesty and transparency in all aspects of my personal and professional life. Integrity is key to building trust and maintaining strong, lasting relationships, which are essential for both personal growth and organizational success."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "I value creativity and problem-solving, always striving to find innovative solutions to challenges. I am constantly seeking new ways to improve processes and enhance efficiency, believing that innovation drives both individual and organizational progress."
+      },
+      "excellence": {
+        "title": "Excellence",
+        "description": "Striving for excellence is at the core of my approach. I am committed to delivering high-quality results in everything I do, whether in academic achievements, leadership roles, or professional endeavors. Excellence drives me to continually improve and exceed expectations."
+      },
+      "collaboration": {
+        "title": "Collaboration",
+        "description": "I understand that teamwork is essential for success. I value collaboration and believe that working together with others, sharing knowledge, and supporting each other leads to the best outcomes. Building strong, cooperative relationships is something I prioritize in both academic and professional environments."
+      }
+    }
   },
   "experience": {
     "title": "Experience",
     "subtitle": "Professional & Organizational Journey",
+    "description": "An overview of my leadership roles and responsibilities, showcasing my ability to manage teams, execute projects, and develop key professional skills.",
     "current": "Present",
     "viewDetails": "View Details",
+    "viewAll": "View All",
     "responsibilities": "Responsibilities",
     "achievements": "Achievements"
   },
   "skills": {
     "title": "Skills",
     "subtitle": "Technical Expertise & Soft Skills",
+    "description": "A summary of the skills and capabilities that define my work.",
+    "all": "All",
+    "viewAll": "View All",
+    "certifications": "Certifications",
     "categories": {
       "technical": "Technical Skills",
       "soft": "Soft Skills",
@@ -53,19 +111,30 @@
   "education": {
     "title": "Education",
     "subtitle": "Academic Background",
+    "description": "A summary of my academic background, where I am currently enhancing my knowledge in actuarial science and building a foundation in accounting.",
     "present": "Present",
     "gpa": "GPA",
     "major": "Major",
-    "activities": "Activities"
+    "activities": "Activities",
+    "viewDetails": "View Details"
   },
   "contact": {
     "title": "Contact Me",
     "subtitle": "Let's Connect",
+    "personalInfo": "Personal Info",
+    "sendMessage": "Send Message",
+    "hereAreBestWays": "Here are the best ways to contact me",
+    "haveQuestions": "Have any questions? Send me a message",
     "form": {
       "name": "Name",
+      "nameRequired": "Name is required",
       "email": "Email",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email address",
       "subject": "Subject",
+      "subjectRequired": "Subject is required",
       "message": "Message",
+      "messageRequired": "Message is required",
       "send": "Send Message",
       "sending": "Sending...",
       "success": "Message sent successfully!",
@@ -86,5 +155,9 @@
   "theme": {
     "light": "Light",
     "dark": "Dark"
+  },
+  "common": {
+    "present": "Present",
+    "language": "Language"
   }
 }

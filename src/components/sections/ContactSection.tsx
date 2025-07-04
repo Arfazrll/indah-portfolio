@@ -13,7 +13,7 @@ const ContactSection: React.FC = () => {
   const contactMethods = [
     {
       icon: FaEnvelope,
-      label: t('Email'),
+      label: t('contact.info.email'),
       value: contactInfo.email,
       href: `mailto:${contactInfo.email}`,
       color: 'text-red-500',
@@ -21,7 +21,7 @@ const ContactSection: React.FC = () => {
     },
     {
       icon: FaPhone,
-      label: t('Phone'),
+      label: t('contact.info.phone'),
       value: contactInfo.phone,
       href: `tel:${contactInfo.phone}`,
       color: 'text-green-500',
@@ -29,7 +29,7 @@ const ContactSection: React.FC = () => {
     },
     {
       icon: FaLinkedin,
-      label: 'LinkedIn',
+      label: t('contact.info.linkedin'),
       value: 'Indah Dwi Afifah',
       href: 'https://www.linkedin.com/in/indah-dwi-afifah/',
       color: 'text-blue-500',
@@ -37,7 +37,7 @@ const ContactSection: React.FC = () => {
     },
     {
       icon: FaMapMarkerAlt,
-      label: t('Location'),
+      label: t('contact.info.location'),
       value: 'Jakarta, Indonesia',
       color: 'text-purple-500',
       bgColor: 'bg-purple-100 dark:bg-purple-900/30',
@@ -48,17 +48,15 @@ const ContactSection: React.FC = () => {
     <section id="contact" className="section-padding bg-section-secondary">
       <div className="container-custom relative z-10">
         <Card variant="bordered" className="card-bg-enhanced">
-          {/* Title Section */}
           <AnimatedSection animation="fadeIn" className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="gradient-text">{t('Contact Information')}</span>
+              <span className="gradient-text">{t('contact.title')}</span>
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              {t('Here are the best ways to contact me')}
+              {t('contact.hereAreBestWays')}
             </p>
           </AnimatedSection>
 
-          {/* Contact Methods */}
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               {contactMethods.map((method, index) => {
@@ -100,12 +98,11 @@ const ContactSection: React.FC = () => {
               })}
             </div>
 
-            {/* Contact Me Card */}
             <AnimatedSection animation="fadeIn" className="text-center">
               <Card variant="gradient" className="inline-block">
-                <h3 className="text-xl font-bold mb-4">{t('Contact Me')}</h3>
+                <h3 className="text-xl font-bold mb-4">{t('contact.sendMessage')}</h3>
                 <p className="text-gray-700 dark:text-gray-300 mb-6 max-w-md">
-                  {t('Have any questions? Send me a message')}
+                  {t('contact.haveQuestions')}
                 </p>
                 <Button
                   href="/contact"
@@ -114,7 +111,7 @@ const ContactSection: React.FC = () => {
                   icon={<FaArrowRight />}
                   iconPosition="right"
                 >
-                  {t('Send Message')}
+                  {t('contact.form.send')}
                 </Button>
               </Card>
             </AnimatedSection>
